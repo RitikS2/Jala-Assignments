@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styling and Effects</title>
+    <style>
+        /* Task 1: Change table border color on hover */
+        table {
+            border: 2px solid black;
+            transition: border-color 0.5s;
+        }
+        table:hover {
+            border-color: red;
+        }
+
+        /* Task 2: Different visibility and display properties */
+        .hidden {
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+        }
+        .collapsed {
+            visibility: collapse;
+        }
+        .none {
+            display: none;
+        }
+        .inline {
+            display: inline;
+        }
+        .block {
+            display: block;
+        }
+        .contents {
+            display: contents;
+        }
+        .list-item {
+            display: list-item;
+        }
+
+        /* Task 3: Smooth scrolling links */
+        a.scrollToTop, a.scrollToBottom {
+            position: fixed;
+            bottom: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            right: 20px;
+        }
+        a.scrollToTop {
+            top: 20px;
+        }
+
+        /* Task 4: Padding and margin */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border: 1px solid #333;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /* Task 5: Multiple background images with adjustable sizes */
+        .background-image-example {
+            width: 400px;
+            height: 300px;
+            background-image: url('background1.jpg'), url('background2.jpg');
+            background-size: 50% 100%, 50% 100%;
+            background-position: left center, right center;
+            background-repeat: no-repeat, no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Border Color Change on Hover</h1>
+    <table>
+        <tr>
+            <td>Table Content</td>
+        </tr>
+    </table>
+
+    <h1>Visibility and Display Properties</h1>
+    <p class="hidden">This element is hidden.</p>
+    <p class="visible">This element is visible.</p>
+    <p class="collapsed">This element is collapsed.</p>
+    <p class="none">This element is not displayed.</p>
+    <p class="inline">This is an inline element.</p>
+    <p class="block">This is a block element.</p>
+    <p class="contents">This is a contents element.</p>
+    <p class="list-item">This is a list item element.</p>
+
+    <h1>Smooth Scrolling Links</h1>
+    <a class="scrollToTop" href="#top">Click to go to top of page</a>
+    <a class="scrollToBottom" href="#bottom">Click to go to bottom of page</a>
+    <!-- A long page to demonstrate scrolling -->
+    <div style="height: 2000px;"></div>
+
+    <h1>Padding and Margin</h1>
+    <div class="box">Box with padding and margin</div>
+
+    <h1>Multiple Background Images</h1>
+    <div class="background-image-example">Background Images</div>
+
+    <a name="top"></a>
+    <!-- A long page to demonstrate scrolling -->
+    <div style="height: 2000px;"></div>
+    <a name="bottom"></a>
+</body>
+</html>

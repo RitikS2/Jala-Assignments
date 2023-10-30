@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Examples</title>
+</head>
+<body>
+    <h2>1. Single and Multiline Comments</h2>
+    <script>
+        // This is a single-line comment
+
+        /*
+        This is a
+        multiline comment
+        */
+    </script>
+
+    <h2>2. Sorting an Array in Descending Order</h2>
+    <ul id="fruitsList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Orange</li>
+    </ul>
+    <button onclick="sortFruitsDescending()">Sort Descending</button>
+    <script>
+        function sortFruitsDescending() {
+            const fruitsList = document.getElementById("fruitsList");
+            const listItems = Array.from(fruitsList.getElementsByTagName("li"));
+            listItems.sort((a, b) => b.textContent.localeCompare(a.textContent));
+            listItems.forEach(item => fruitsList.appendChild(item));
+        }
+    </script>
+
+    <h2>3. FOR/IN Loop</h2>
+    <script>
+        const fruits = ["Apple", "Banana", "Cherry", "Orange"];
+        for (let i in fruits) {
+            console.log(fruits[i]);
+        }
+    </script>
+
+    <h2>4. Accessing Object Properties</h2>
+    <script>
+        const person = {
+            firstname: "John",
+            lastname: "Doe"
+        };
+
+        // Accessing properties using dot notation
+        console.log(person.firstname);
+        console.log(person.lastname);
+
+        // Accessing properties using bracket notation
+        console.log(person['firstname']);
+        console.log(person['lastname']);
+    </script>
+
+    <h2>5. Variable Hoisting</h2>
+    <script>
+        console.log(x); // This will log "undefined" but not cause an error
+        var x = 5;
+    </script>
+
+    <h2>6. Strict Mode and Variable Not Declared</h2>
+    <script>
+        'use strict';
+
+        // This will throw an error in strict mode
+        y = 10;
+    </script>
+</body>
+</html>

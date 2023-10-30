@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Examples</title>
+    <style>
+        #disappearing-button {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. Disappearing Button</h2>
+    <button id="disappearing-button" onclick="hideButton()">Click to Disappear</button>
+    <script>
+        function hideButton() {
+            document.getElementById("disappearing-button").style.display = "none";
+        }
+    </script>
+
+    <h2>2. Using call() and apply()</h2>
+    <script>
+        function greet(name) {
+            console.log(`Hello, ${name}!`);
+        }
+
+        greet.call(null, "John"); // Using call
+        greet.apply(null, ["Alice"]); // Using apply
+    </script>
+
+    <h2>3. Counter Program</h2>
+    <p>Counter Value: <span id="counter">0</span></p>
+    <button onclick="incrementCounter()">Count</button>
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById("counter");
+
+        function incrementCounter() {
+            count++;
+            counterElement.textContent = count;
+        }
+    </script>
+
+    <h2>4. Counter Using Getter and Setter</h2>
+    <p>Counter Value: <span id="counter2">0</span></p>
+    <button onclick="incrementCounter2()">Count</button>
+    <script>
+        let count2 = 0;
+        const counterElement2 = document.getElementById("counter2");
+
+        Object.defineProperty(window, 'counter2', {
+            get: function() {
+                return count2;
+            },
+            set: function(value) {
+                count2 = value;
+                counterElement2.textContent = count2;
+            }
+        });
+
+        function incrementCounter2() {
+            counter2++;
+        }
+    </script>
+
+    <h2>5. Adding Properties to Function Using Object Prototypes</h2>
+    <script>
+        function Calculator(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        Calculator.prototype.add = function() {
+            return this.x + this.y;
+        };
+
+        Calculator.prototype.subtract = function() {
+            return this.x - this.y;
+        };
+
+        const calc = new Calculator(10, 5);
+        console.log(`Addition: ${calc.add()}`);
+        console.log(`Subtraction: ${calc.subtract()}`);
+    </script>
+</body>
+</html>

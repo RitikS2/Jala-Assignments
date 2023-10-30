@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Examples</title>
+    <style>
+        #date-time {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. Event Listener to Display Current Date and Time</h2>
+    <button id="show-date-time">Show Date and Time</button>
+    <p id="date-time">Current Date and Time: <span id="datetime"></span></p>
+    <script>
+        const showDateTimeButton = document.getElementById("show-date-time");
+        const dateTimeElement = document.getElementById("date-time");
+        const datetimeSpan = document.getElementById("datetime");
+
+        showDateTimeButton.addEventListener("click", function () {
+            const now = new Date();
+            datetimeSpan.textContent = now.toLocaleString();
+            dateTimeElement.style.display = "block";
+        });
+    </script>
+
+    <h2>2. JavaScript Validation</h2>
+    <form id="validation-form">
+        <label for="input-text">Enter Text:</label>
+        <input type="text" id="input-text" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const validationForm = document.getElementById("validation-form");
+
+        validationForm.addEventListener("submit", function (event) {
+            if (inputText.value.trim() === "") {
+                alert("Text box cannot be empty.");
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <h2>3. Using console.log() for Debugging</h2>
+    <script>
+        const x = 10;
+        const y = 5;
+        console.log("Adding x and y:", x + y);
+        console.log("Subtracting x and y:", x - y);
+        console.log("Multiplying x and y:", x * y);
+    </script>
+
+    <h2>4. Set, Get, and Check Cookies</h2>
+    <script>
+        // Set a cookie
+        document.cookie = "username=John";
+
+        // Get a cookie
+        const cookies = document.cookie;
+        console.log("Cookies:", cookies);
+
+        // Check if a cookie exists
+        if (cookies.includes("username")) {
+            console.log("Username cookie exists.");
+        }
+    </script>
+
+    <h2>5. Creating and Accessing JSON Object</h2>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            email: "johndoe@example.com"
+        };
+
+        console.log("First Name:", person.firstName);
+        console.log("Last Name:", person.lastName);
+        console.log("Age:", person.age);
+        console.log("Email:", person.email);
+    </script>
+</body>
+</html>

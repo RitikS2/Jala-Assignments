@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Layout and Responsive Design</title>
+    <style>
+        /* Task 1: Table Layouts */
+        .table-fixed {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-none {
+            table-layout: none;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Task 2: Changing List Style Type */
+        .custom-list {
+            list-style-type: square;
+        }
+
+        /* Task 3: Grids */
+        .grid-example {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid-example .item {
+            background-color: #3498db;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        /* Task 4: Hero Image */
+        .hero-image {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: #e21d1d;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Task 5: Media Queries */
+        @media screen and (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+            .hero-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Layouts</h1>
+    <table class="table-fixed">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+        </tr>
+    </table>
+
+    <table class="table-none">
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+        </tr>
+    </table>
+
+    <h1>Changing List Style Type</h1>
+    <ul class="custom-list">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ul>
+
+    <h1>Grids</h1>
+    <div class="grid-example">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+
+    <h1>Hero Image</h1>
+    <div class="hero-image">
+        <h2>Welcome to our website</h2>
+        <p>Discover amazing content here.</p>
+    </div>
+</body>
+</html>

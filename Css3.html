@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Effects and Properties</title>
+    <style>
+        /* Task 1: Apply CSS shadow effect and hover cursor */
+        .image-box {
+            width: 300px;
+            height: 200px;
+            background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg');
+            background-size: cover;
+            box-shadow: 5px 5px 10px #888888;
+            cursor: pointer;
+        }
+        .image-box:hover {
+            box-shadow: 5px 5px 15px #333333;
+            cursor: zoom-in;
+        }
+
+        /* Task 2: CSS animations and paginations */
+        @keyframes example {
+            from { transform: translateX(0); }
+            to { transform: translateX(200px); }
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            animation-name: example;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+
+        /* Task 3: CSS positions */
+        .position-static {
+            position: static;
+        }
+        .position-relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        .position-fixed {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+        .position-absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .position-sticky {
+            position: sticky;
+            top: 20px;
+        }
+
+        /* Task 4: Handling Overflow with scroll */
+        .overflow-scroll {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #333;
+            overflow: scroll;
+        }
+
+        /* Task 5: Adding Opacity to an image */
+        .image-opacity {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Shadow Effect and Hover Cursor</h1>
+    <div class="image-box"></div>
+
+    <h1>CSS Animations and Paginations</h1>
+    <div class="animated-box"></div>
+
+    <h1>CSS Positions</h1>
+    <div class="position-static">Static Position</div>
+    <div class="position-relative">Relative Position</div>
+    <div class="position-fixed">Fixed Position</div>
+    <div class="position-absolute">Absolute Position</div>
+    <div class="position-sticky">Sticky Position</div>
+
+    <h1>Handling Overflow with Scroll</h1>
+    <div class="overflow-scroll">
+        This is a scrollable box with overflow.
+        It will show a scrollbar when the content exceeds its size.
+    </div>
+
+    <h1>Adding Opacity to an Image</h1>
+    <img src="image.jpg" class="image-opacity" alt="Image with opacity">
+</body>
+</html>

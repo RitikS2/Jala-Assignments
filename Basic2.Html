@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page with Inputs and More</title>
+</head>
+<body>
+    <h1>Input Attributes</h1>
+    <form action="submit_form.php" method="post">
+        <label for="text-input">Text Input:</label>
+        <input type="text" id="text-input" name="text-input" size="20" maxlength="30" required value="Default Text">
+
+        <br>
+
+        <label for="password-input">Password Input:</label>
+        <input type="password" id="password-input" name="password-input" size="20" maxlength="20" required>
+
+        <br>
+
+        <label for="radio-input">Radio Button:</label>
+        <input type="radio" id="radio-input" name="radio" value="Option 1" checked> Option 1
+        <input type="radio" id="radio-input" name="radio" value="Option 2"> Option 2
+
+        <br>
+
+        <label for="checkbox-input">Checkbox:</label>
+        <input type="checkbox" id="checkbox-input" name="checkbox" value="Check1" checked> Check 1
+        <input type="checkbox" id="checkbox-input" name="checkbox" value="Check2"> Check 2
+
+        <br>
+
+        <label for="button-input">Button:</label>
+        <input type="button" id="button-input" name="button-input" value="Click Me" onclick="alert('Button Clicked')">
+
+        <br>
+
+        <label for="submit-input">Submit Button:</label>
+        <input type="submit" id="submit-input" value="Submit Form">
+
+        <br>
+
+        <label for="reset-input">Reset Button:</label>
+        <input type="reset" id="reset-input" value="Reset Form">
+    </form>
+
+    <h1>HTML5 Input Types</h1>
+    <input type="number" min="0" max="100" step="5" value="50">
+    <input type="range" min="0" max="100" value="50">
+    <input type="color" value="#ff0000">
+    <input type="date" value="2023-10-30">
+    <input type="file" accept=".jpg, .png">
+    <input type="time" value="12:00">
+    <input type="month" value="2023-10">
+    <input type="week" value="2023-W44">
+    <input type="email" required>
+
+    <h1>Input Restrictions</h1>
+    <input type="text" disabled>
+    <input type="number" min="10" max="50" value="30" required>
+    <input type="text" readonly>
+    <input type="text" size="30">
+    <input type="text" value="Initial Value">
+
+    <h1>Target Attribute</h1>
+    <a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a>
+
+    <h1>IFrames and Marquee</h1>
+    <iframe src="https://www.example.com" width="500" height="300"></iframe>
+    <marquee behavior="scroll" direction="left">This is a scrolling marquee text.</marquee>
+</body>
+</html>
